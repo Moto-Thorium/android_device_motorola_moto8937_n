@@ -13,14 +13,14 @@
 #include <android-base/file.h>
 #include <android-base/properties.h>
 
-static const variant_info_t ahannah_info = {
+static const variant_info_t montana_info = {
     .brand = "motorola",
-    .device = "ahannah",
-    .marketname = "moto e⁵ plus",
-    .model = "XT1924",
+    .device = "montana",
+    .marketname = "Moto G (5S)",
+    .model = "Moto G (5S)",
     .build_fingerprint = "",
 
-    .dpi = 280,
+    .dpi = 420,
 };
 
 static void determine_variant()
@@ -28,8 +28,8 @@ static void determine_variant()
     std::string variant;
 
     android::base::ReadFileToString("/sys/motorola-msm8937-mach/variant", &variant, true);
-    if (variant == "ahannah")
-        set_variant_props(ahannah_info);
+    if (variant == "montana")
+        set_variant_props(montana_info);
 }
 
 static void set_model()

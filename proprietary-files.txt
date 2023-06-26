@@ -1,17 +1,14 @@
-# ahannah Package version: 8.0.0/OCP27.91-38-31-54/65:user/release-keys
+# montana Package version: 8.0.0/OCP27.91-38-31-54/65:user/release-keys
 
-# Firmware - from ahannah
-vendor/firmware/FT8006U_Pramboot.bin
+# Firmware (NFC) - from montana
+vendor/firmware/libpn548ad_fw.so
 
-# Firmware - hannah - from ahannah
-vendor/firmware/focaltech-ofilm-ft8006u-04-0001-hannah.bin
-vendor/firmware/focaltech-ofilm-ft8006u-05-0001-hannah.bin
-vendor/firmware/himax-djn-hx83102b-171110-0504-hannah.bin
-vendor/firmware/himax-djn-hx83102b-171120-0604-hannah.bin
-vendor/firmware/novatek_ts-djn-NT36525-180226-17-hannah.bin
-vendor/firmware/novatek_ts-djn-NT36525-180410-18-hannah.bin
-vendor/firmware/novatek_ts-tianma-NT36525-180131-23-hannah.bin
-vendor/firmware/novatek_ts-tianma-NT36525-180312-25-hannah.bin
+# Firmware (Touchscreen) - from montana
+vendor/firmware/synaptics-inx-s3603r-17042001-27111d-montana.tdat
+vendor/firmware/synaptics-tianma-s3603r-17041102-27111d-montana.tdat
 
-# WLAN - from ahannah
-vendor/etc/wifi/WCNSS_qcom_wlan_nv.bin:vendor/firmware/wlan/prima/ahannah_WCNSS_qcom_wlan_nv.bin|fb1275047485a605d6d9e4121ee54344ae93dd9d
+# Gatekeeper - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
+vendor/lib64/hw/gatekeeper.msm8937.so
+
+# Keystore - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
+vendor/lib64/hw/keystore.msm8937.so

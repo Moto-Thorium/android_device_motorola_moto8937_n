@@ -4,30 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Gatekeeper
-TARGET_USES_DEVICE_SPECIFIC_GATEKEEPER := true
-
-# Keymaster
-TARGET_USES_DEVICE_SPECIFIC_KEYMASTER := true
-
 # Inherit from msm8937-common
 $(call inherit-product, device/motorola/msm8937-common/msm8937.mk)
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 1440
 
 # Audio
 #PRODUCT_COPY_FILES += \
 #    $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/mixer_paths/,$(TARGET_COPY_OUT_ODM)/etc/) \
 #    $(call find-copy-subdir-files,*.xml,$(LOCAL_PATH)/audio/platform_info/,$(TARGET_COPY_OUT_ODM)/etc/)
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0-service.software
-
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1-service
 
 # Rootdir
 PRODUCT_PACKAGES += \
