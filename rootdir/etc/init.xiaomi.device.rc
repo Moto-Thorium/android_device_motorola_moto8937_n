@@ -1,0 +1,15 @@
+service vendor.xiaomi_device_script /vendor/bin/init.xiaomi.device.sh
+    class early_hal
+    user root
+    group root
+    oneshot
+
+# Audio
+on property:ro.vendor.xiaomi.variant=*
+    setprop vendor.audio.mixer_xml.path /odm/etc/${ro.vendor.xiaomi.variant}_mixer_paths.xml
+    setprop vendor.audio.platform_info_xml.path /odm/etc/${ro.vendor.xiaomi.variant}_audio_platform_info_intcodec.xml
+
+# Sensors
+on property:ro.vendor.xiaomi.variant=*
+    mount none /vendor/etc/sensors/${ro.vendor.xiaomi.variant}_sensor_def_qcomdev.conf /vendor/etc/sensors/${ro.vendor.xiaomi.variant}_def_qcomdev.conf bind
+    enable vendor-sensor-sh
