@@ -8,8 +8,8 @@
 
 set -e
 
-export DEVICE=moto8937_o_4_19
-export DEVICE_PARENT=moto8937_o
+export DEVICE=moto8937_n_4_19
+export DEVICE_PARENT=moto8937_n
 export DEVICE_COMMON=msm8937-common
 export VENDOR=motorola
 

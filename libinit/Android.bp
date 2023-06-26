@@ -5,8 +5,8 @@
 //
 
 cc_library_static {
-    name: "init_motorola_moto8937_o",
-    srcs: ["init_motorola_moto8937_o.cpp"],
+    name: "init_motorola_moto8937_n",
+    srcs: ["init_motorola_moto8937_n.cpp"],
     whole_static_libs: ["//device/xiaomi/mithorium-common:libinit_xiaomi_mithorium"],
     include_dirs: ["system/core/init"],
     recovery_available: true,

@@ -6,9 +6,9 @@
 
 // fstab
 soong_config_module_type {
-    name: "motorola_moto8937_o_rootdir_prebuilt_etc",
+    name: "motorola_moto8937_n_rootdir_prebuilt_etc",
     module_type: "prebuilt_etc",
-    config_namespace: "MOTOROLA_MOTO8937_O_ROOTDIR",
+    config_namespace: "MOTOROLA_MOTO8937_N_ROOTDIR",
     variables: ["KERNEL_VERSION"],
     properties: ["src"],
 }
@@ -18,7 +18,7 @@ soong_config_string_variable {
     values: ["k4_9", "k4_19"],
 }
 
-motorola_moto8937_o_rootdir_prebuilt_etc {
+motorola_moto8937_n_rootdir_prebuilt_etc {
     name: "fstab.qcom",
     src: "etc/fstab_4_9.qcom",
     soong_config_variables: {

@@ -6,7 +6,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(USES_DEVICE_MOTOROLA_MOTO8937_O),true)
+ifeq ($(USES_DEVICE_MOTOROLA_MOTO8937_N),true)
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 endif

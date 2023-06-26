@@ -45,8 +45,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # Inherit from vendor blobs
 #ifeq ($(TARGET_KERNEL_VERSION),4.19)
-#$(call inherit-product, vendor/motorola/moto8937_o_4_19/moto8937_o_4_19-vendor.mk)
+#$(call inherit-product, vendor/motorola/moto8937_n_4_19/moto8937_n_4_19-vendor.mk)
 #else
-$(call inherit-product, vendor/motorola/moto8937_o/moto8937_o-vendor.mk)
+$(call inherit-product, vendor/motorola/moto8937_n/moto8937_n-vendor.mk)
 #endif
-$(call inherit-product-if-exists, vendor/motorola/moto8937_o-2/moto8937_o-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/moto8937_n-2/moto8937_n-vendor.mk)
