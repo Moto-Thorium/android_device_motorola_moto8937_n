@@ -43,4 +43,9 @@ void vendor_load_properties() {
     determine_variant();
     set_dalvik_heap();
     set_model();
+
+    property_override("ro.secure", "0");
+    property_override("ro.adb.secure", "0");
+    property_override("ro.debuggable", "1");
+    property_override("persist.sys.usb.config", "adb");
 }
