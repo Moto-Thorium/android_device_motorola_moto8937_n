@@ -24,6 +24,9 @@ TARGET_RECOVERY_DEVICE_MODULES := init_motorola_moto8937_n
 TARGET_KERNEL_CONFIG += \
     vendor/motorola/msm8937/montana.config
 
+TARGET_KERNEL_RECOVERY_CONFIG += \
+    vendor/motorola/msm8937/montana.config
+
 # Partitions - dynamic
 BOARD_SUPER_PARTITION_BLOCK_DEVICES := oem system
 BOARD_SUPER_PARTITION_METADATA_DEVICE := system
