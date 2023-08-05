@@ -28,6 +28,10 @@ static void determine_variant()
     std::string variant;
 
     android::base::ReadFileToString("/sys/motorola-msm8937-mach/variant", &variant, true);
+    if (variant.empty())
+        return;
+    variant.pop_back();
+
     if (variant == "montana")
         set_variant_props(montana_info);
 }
