@@ -11,7 +11,7 @@ DEVICE_PATH := device/motorola/moto8937_n
 USES_DEVICE_MOTOROLA_MOTO8937_N := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := moto8937_n,montana
+TARGET_OTA_ASSERT_DEVICE := moto8937_n,moto8937_n_4_19,montana
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
