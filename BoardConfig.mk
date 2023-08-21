@@ -11,7 +11,7 @@ DEVICE_PATH := device/motorola/moto8937_n
 USES_DEVICE_MOTOROLA_MOTO8937_N := true
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := moto8937_n,moto8937_n_4_19,montana
+TARGET_OTA_ASSERT_DEVICE := moto8937_n,montana
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -53,21 +53,11 @@ ifneq ($(WITH_GMS),true)
 BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 419430400 # 400 MB
 endif
 
-# Recovery
-ifeq ($(TARGET_KERNEL_VERSION),4.19)
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab_4_19.qcom
-else
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab_4_9.qcom
-endif
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-# Rootdir
-SOONG_CONFIG_NAMESPACES += MOTOROLA_MOTO8937_N_ROOTDIR
-SOONG_CONFIG_MOTOROLA_MOTO8937_N_ROOTDIR := KERNEL_VERSION
-ifeq ($(TARGET_KERNEL_VERSION),4.19)
-SOONG_CONFIG_MOTOROLA_MOTO8937_N_ROOTDIR_KERNEL_VERSION := k4_19
-else
-SOONG_CONFIG_MOTOROLA_MOTO8937_N_ROOTDIR_KERNEL_VERSION := k4_9
-endif
+# Recovery
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-02-01
@@ -76,8 +66,4 @@ VENDOR_SECURITY_PATCH := 2019-02-01
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Inherit from the proprietary version
-#ifeq ($(TARGET_KERNEL_VERSION),4.19)
-#include vendor/motorola/moto8937_n_4_19/BoardConfigVendor.mk
-#else
 include vendor/motorola/moto8937_n/BoardConfigVendor.mk
-#endif

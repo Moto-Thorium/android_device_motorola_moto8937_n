@@ -7,8 +7,8 @@ vendor/firmware/libpn548ad_fw.so
 vendor/firmware/synaptics-inx-s3603r-17042001-27111d-montana.tdat
 vendor/firmware/synaptics-tianma-s3603r-17041102-27111d-montana.tdat
 
-# Gatekeeper - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
+# Gatekeeper - from LA.UM.9.6.3.r1-06200-89xx.0
 vendor/lib64/hw/gatekeeper.msm8937.so
 
-# Keystore - from LA.UM.9.6.3.r1-06200-89xx.0 (4.9)
+# Keystore - from LA.UM.9.6.3.r1-06200-89xx.0
 vendor/lib64/hw/keystore.msm8937.so
